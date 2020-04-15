@@ -3,7 +3,18 @@
 import math
 
 def recipe_batches(recipe, ingredients):
-  pass 
+  need = recipe
+  have = ingredients
+  
+  # need to divide each key:value pair in have ingredients by matching key:value pair in recipe ingredients
+
+  # should buuild some error catching in case user is missing an ingredient entirely in the "have" dictionary
+
+  # round down
+
+  # find smallest value from each key value pair
+
+  # return that number
 
 
 if __name__ == '__main__':
