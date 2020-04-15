@@ -3,18 +3,34 @@
 import math
 
 def recipe_batches(recipe, ingredients):
-  need = recipe
-  have = ingredients
+  # need = recipe
+  # have = ingredients
+  possible_list = []
   
-  # need to divide each key:value pair in have ingredients by matching key:value pair in recipe ingredients
-
-  # should buuild some error catching in case user is missing an ingredient entirely in the "have" dictionary
-
-  # round down
-
-  # find smallest value from each key value pair
-
+  
+  # need to divide each key:value pair in "have" dictionary by matching key:value pair in "recipe" dictionary
+  # iterate over "have" dictionary to extract both key and value pair
+  # match to corresponding key and value pair in "need" dictionary
+  for key in recipe.keys():
+    # make sure all recipe parts exist in ingredients
+    if key in ingredients:
+      # math up and round down
+      possible = math.floor(ingredients[key] / recipe[key])
+      # put possible into possible_list
+      possible_list.append(possible)
+    # if recipe part does not exist in ingredients, return 0
+    else:
+      return 0
+  
   # return that number
+  return min(possible_list)
+    
+
+
+  # should build some error catching in case user is missing an ingredient entirely in the "have" dictionary
+
+
+
 
 
 if __name__ == '__main__':
