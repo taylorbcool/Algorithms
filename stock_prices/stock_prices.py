@@ -4,7 +4,6 @@ import argparse
 
 def find_max_profit(prices):
   max_profit = prices[1] - prices[0]
-  print(prices)
   # find the difference between one value and all values after it
   # assign that value to profit
   # important to make sure not to check values before the current value
